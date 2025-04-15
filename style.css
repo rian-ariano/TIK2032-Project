@@ -1,0 +1,179 @@
+
+/* Navbar */
+nav {
+    background-color: #43bedd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-blocks;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    transition: 0.3s;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  
+  nav a:hover {
+    background-color: #3498b1;
+  }
+
+  nav a.active {
+    background-color: #dbf8ff;
+    color: #43bedd;
+    font-weight: bold;
+    border: 2px solid #3498b1;
+  }
+  
+  
+  /* Body */
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #052941;
+  }
+  
+  /* Main */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  main h1 {
+    margin-bottom: 15px;
+  }
+  
+  .container-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .container-1 img {
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  
+  .container-1 p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    text-align: justify;
+    width: 300px;
+  }
+  
+  img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    margin-right: 20px;
+    float: left;
+    object-fit: cover;
+    margin-right: 10px;
+    display: flex;
+    margin-bottom: 25px;
+  }
+  
+  section {
+    width: 80%;
+    max-width: 1000px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  section ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    overflow: hidden; /* Memotong konten yang melebihi batas */
+    position: relative; /* Memposisikan pseudo-element */
+    
+    /* Menambahkan pseudo-element ::before */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #337ab7;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+  }
+  
+    &::after {
+      content: "Beginner";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px 10px;
+      border: 1px solid #337ab7;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      z-index: 2; 
+    }
+    
+    &:hover::before {
+      width: 100%;
+    }
+    
+    &:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  /* Style untuk keseluruhan footer */
+  footer {
+    background-color: #43bedd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 125px;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+  }
+  
+  footer p {
+    margin-top: 20px;
+    justify-content: center;
+    color: #ffffff;
+  }
