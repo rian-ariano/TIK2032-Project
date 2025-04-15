@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Constantio Ariano Isworo</title>
     <link rel="stylesheet" href="contact.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -12,7 +13,7 @@
         <a href="index.html">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </header>
     <hr />
@@ -34,15 +35,11 @@
                 </div>
                 <div class="form-group">
                   <label for="pesan">Pesan:</label>
-                  <textarea
-                    id="pesan"
-                    name="pesan"
-                    rows="4"
-                    required
-                  ></textarea>
+                  <textarea id="pesan" name="pesan" maxlength="250" required></textarea>
+                  <small id="counter">250 karakter tersisa</small>
                 </div>
                 <!-- <button type="submit">Kirim</button> -->
-                <div class="custom-button">Kirim</div>
+                <button type="button" class="custom-button">Kirim</button>
               </form>
             </div>
           </div>
